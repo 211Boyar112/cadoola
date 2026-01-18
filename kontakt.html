@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Fragen und Kontaktmöglichkeiten</title>
+    <meta name="description" content="Kontaktieren Sie den Cadoola Online Guide. Kontaktformular, E-Mail und Informationen für Presse, Kooperationen und allgemeine Anfragen.">
+    <link rel="canonical" href="https://cadoola-online.de/kontakt">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico">    
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kontakt – Fragen und Kontaktmöglichkeiten">
+    <meta property="og:description" content="Kontaktformular und Kontaktinformationen für den Cadoola Online Guide">
+    <meta property="og:image" content="https://cadoola-online.de/images/og-kontakt.jpg">
+    <meta property="og:url" content="https://cadoola-online.de/kontakt">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakt">
+    <meta name="twitter:description" content="Kontaktieren Sie uns für Fragen und Anliegen">
+    <meta name="twitter:image" content="https://cadoola-online.de/images/twitter-kontakt.jpg">
+    
+    <style>
+        /* Base & Mobile-First Styles */
+        :root { --primary: #1a5c36; --secondary: #0f4226; --text: #333; --light: #f8f8f8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); scroll-behavior: smooth; }
+        body { max-width: 100vw; overflow-x: hidden; background: #fff; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { width: 100%; padding: 0 1rem; margin: 0 auto; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; text-align: center; cursor: pointer; transition: 0.3s; border: none; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--secondary); text-decoration: none; }
+        .btn-secondary { background: #f0f0f0; color: var(--text); }
+        .btn-secondary:hover { background: #e0e0e0; text-decoration: none; }
+        .header { background: linear-gradient(135deg, #0f4226 0%, #1a5c36 100%); color: white; padding: 2rem 1rem; text-align: center; }
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; line-height: 1.2; }
+        .breadcrumb { background: #f5f5f5; padding: 1rem; font-size: 0.9rem; }
+        .breadcrumb a { color: #666; }
+        .breadcrumb span { color: #999; }
+        .section { padding: 2rem 1rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary); }
+        h3 { font-size: 1.2rem; margin: 1.5rem 0 0.75rem; color: var(--secondary); }
+        p, ul, ol { margin-bottom: 1rem; }
+        ul, ol { padding-left: 1.5rem; }
+        .contact-form { background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        input, textarea, select { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
+        textarea { min-height: 150px; resize: vertical; }
+        .required::after { content: " *"; color: #d32f2f; }
+        .info-box { background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #1976d2; }
+        .warning-box { background: #ffebee; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #d32f2f; }
+        .success-box { background: #f1f8e9; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #689f38; display: none; }
+        .contact-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0; }
+        .contact-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .contact-card h4 { color: var(--primary); margin-bottom: 0.5rem; }
+        .contact-icon { font-size: 2rem; margin-bottom: 1rem; color: var(--primary); }
+        .faq-section { background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-q { font-weight: 700; margin-bottom: 0.5rem; }
+        footer { background: #222; color: #ccc; padding: 3rem 1rem; text-align: center; }
+        .footer-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+        .footer-menu a { color: #aaa; }
+        .footer-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+        .footer-logos img { height: 40px; width: auto; }
+        .disclaimer { font-size: 0.8rem; color: #888; margin-top: 2rem; line-height: 1.4; }
+        .update-date { font-size: 0.9rem; color: #666; font-style: italic; margin-bottom: 1rem; }
+        .response-time { background: #fff8e1; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-size: 0.9rem; }
+        @media (min-width: 768px) {
+            .container { max-width: 1200px; padding: 0 2rem; }
+            .header { padding: 3rem 2rem; }
+            .header h1 { font-size: 2.2rem; }
+            .section { padding: 2.5rem 2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-form { max-width: 800px; margin: 2rem auto; }
+        }
+        @media (min-width: 1024px) {
+            .contact-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://cadoola-online.de/#website",
+                "url": "https://cadoola-online.de/",
+                "name": "Cadoola Online Guide",
+                "description": "Unabhängige Informationen zu Cadoola Casino",
+                "inLanguage": "de-DE"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://cadoola-online.de/kontakt/#webpage",
+                "url": "https://cadoola-online.de/kontakt",
+                "name": "Kontakt – Cadoola Online Guide | Fragen und Kontaktmöglichkeiten",
+                "datePublished": "2026-01-11T10:00:00+01:00",
+                "dateModified": "2026-01-11T10:00:00+01:00",
+                "description": "Kontaktieren Sie den Cadoola Online Guide. Kontaktformular, E-Mail und Informationen für Presse, Kooperationen und allgemeine Anfragen.",
+                "isPartOf": { "@id": "https://cadoola-online.de/#website" },
+                "inLanguage": "de-DE",
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "item": {
+                                "@id": "https://cadoola-online.de/",
+                                "name": "Startseite"
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "item": {
+                                "@id": "https://cadoola-online.de/kontakt",
+                                "name": "Kontakt"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "Organization",
+                "name": "Cadoola Online Guide",
+                "url": "https://cadoola-online.de/",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "email": "kontakt@cadoola-online.de",
+                    "availableLanguage": "de"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Kontakt</h1>
+            <p>Kontaktieren Sie den Cadoola Online Guide – Wir helfen Ihnen gerne weiter</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="https://cadoola-online.de/">Startseite</a> &gt; 
+            <span>Kontakt</span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Introduction -->
+        <section class="section">
+            <p class="update-date">Kontaktinformationen – Stand: Januar 2026</p>
+            
+            <div class="info-box">
+                <p><strong>Hinweis zur Unabhängigkeit:</strong> cadoola-online.de ist ein unabhängiger Informationsdienst und nicht mit dem Cadoola Casino oder dessen Betreibergesellschaften verbunden. Für Anfragen bezüglich des Cadoola Casinos wenden Sie sich bitte direkt an dessen Kundenservice.</p>
+            </div>
+            
+            <p>Wir freuen uns über Ihr Interesse am Cadoola Online Guide. Nutzen Sie das Kontaktformular oder die untenstehenden Kontaktmöglichkeiten, um mit uns in Verbindung zu treten.</p>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="section">
+            <h2>Kontaktformular</h2>
+            
+            <div class="warning-box">
+                <p><strong>Wichtiger Hinweis:</strong> Bitte lesen Sie vor Kontaktaufnahme unsere <a href="/faq">häufig gestellten Fragen (FAQ)</a>. Vielleicht finden Sie dort bereits die gewünschte Information.</p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm" action="#" method="post" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="required">Ihr Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Ihre E-Mail-Adresse</label>
+                        <input type="email" id="email" name="email" required placeholder="beispiel@email.de">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="required">Betreff</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Bitte wählen Sie einen Betreff</option>
+                            <option value="allgemeine-frage">Allgemeine Frage zur Website</option>
+                            <option value="technisches-problem">Technisches Problem</option>
+                            <option value="inhaltskorrektur">Inhaltskorrektur oder Aktualisierung</option>
+                            <option value="kooperation">Kooperationsanfrage</option>
+                            <option value="presse">Presseanfrage</option>
+                            <option value="datenschutz">Datenschutzanfrage</option>
+                            <option value="rechtliches">Rechtliche Angelegenheit</option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="required">Ihre Nachricht</label>
+                        <textarea id="message" name="message" required placeholder="Bitte beschreiben Sie Ihr Anliegen ausführlich..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="privacy" required>
+                            Ich habe die <a href="/privacy-policy">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zum Zweck der Kontaktaufnahme zu.
+                        </label>
+                    </div>
+                    
+                    <div class="response-time">
+                        <p><strong>Antwortzeit:</strong> Wir bemühen uns, alle Anfragen innerhalb von 2-3 Werktagen zu beantworten. Bei technischen Problemen oder rechtlichen Anfragen kann die Bearbeitung länger dauern.</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                    <button type="reset" class="btn btn-secondary">Formular zurücksetzen</button>
+                </form>
+                
+                <div id="successMessage" class="success-box">
+                    <p><strong>✓ Nachricht erfolgreich gesendet!</strong> Vielen Dank für Ihre Kontaktaufnahme. Wir werden uns in Kürze bei Ihnen melden.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="section">
+            <h2>Direkte Kontaktmöglichkeiten</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Allgemeine Anfragen</h4>
+                    <p>Für allgemeine Fragen zur Website:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:info@cadoola-online.de">info@cadoola-online.de</a></p>
+                    <p><small>Antwortzeit: 2-3 Werktage</small></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🔒</div>
+                    <h4>Datenschutz</h4>
+                    <p>Für datenschutzrechtliche Anfragen:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:datenschutz@cadoola-online.de">datenschutz@cadoola-online.de</a></p>
+                    <p><small>Gemäß Art. 15-21 DSGVO</small></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">⚖️</div>
+                    <h4>Rechtliche Angelegenheiten</h4>
+                    <p>Für rechtliche Anfragen und Abmahnungen:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:rechtliches@cadoola-online.de">rechtliches@cadoola-online.de</a></p>
+                    <p><small>Bitte mit vollständigen Angaben</small></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🤝</div>
+                    <h4>Kooperationen & Presse</h4>
+                    <p>Für Kooperationsanfragen und Presse:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:kooperation@cadoola-online.de">kooperation@cadoola-online.de</a></p>
+                    <p><small>Bitte Projektbeschreibung beifügen</small></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🐛</div>
+                    <h4>Technische Probleme</h4>
+                    <p>Für technische Probleme mit der Website:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:support@cadoola-online.de">support@cadoola-online.de</a></p>
+                    <p><small>Bitte Screenshots mitsenden</small></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📝</div>
+                    <h4>Inhaltskorrekturen</h4>
+                    <p>För Fehlerhinweise und Aktualisierungen:</p>
+                    <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:redaktion@cadoola-online.de">redaktion@cadoola-online.de</a></p>
+                    <p><small>Mit Quellenangabe und Beleg</small></p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <p><strong>Bitte beachten Sie:</strong> Für eine schnellere Bearbeitung wählen Sie bitte die passende E-Mail-Adresse für Ihr Anliegen. So können wir Ihre Anfrage direkt an die zuständige Stelle weiterleiten.</p>
+            </div>
+        </section>
+
+        <!-- What we can and cannot help with -->
+        <section class="section">
+            <h2>Was wir bearbeiten können – und was nicht</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>✅ Wir können helfen bei:</h4>
+                    <ul>
+                        <li>Fragen zur Nutzung unserer Website</li>
+                        <li>Technischen Problemen mit cadoola-online.de</li>
+                        <li>Korrekturen von Fehlern in unseren Inhalten</li>
+                        <li>Datenschutzanfragen gemäß DSGVO</li>
+                        <li>Kooperations- und Presseanfragen</li>
+                        <li>Allgemeinen Fragen zu Online-Casinos</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>❌ Wir können NICHT helfen bei:</h4>
+                    <ul>
+                        <li>Problemen mit dem Cadoola Casino-Konto</li>
+                        <li>Auszahlungen oder Einzahlungen bei Casinos</li>
+                        <li>Bonusanfragen oder Casino-Promotions</li>
+                        <li>Persönlicher Rechts- oder Steuerberatung</li>
+                        <li>Individueller Spielsuchtberatung</li>
+                        <li>Entscheidungen über Glücksspielteilnahme</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <p><strong>Wichtig:</strong> Für alle Angelegenheiten, die das Cadoola Casino direkt betreffen (Konto, Einzahlungen, Auszahlungen, Bonusangebote, technische Probleme im Casino), wenden Sie sich bitte direkt an den Kundenservice des Cadoola Casinos.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <h2>Häufig gestellte Fragen (FAQ)</h2>
+            
+            <div class="faq-section">
+                <div class="faq-item">
+                    <p class="faq-q">Wie lange dauert es, bis ich eine Antwort erhalte?</p>
+                    <p>Wir bemühen uns, alle Anfragen innerhalb von 2-3 Werktagen zu beantworten. Komplexere Anfragen (rechtliche, technische) können bis zu 5 Werktage benötigen. In dringenden Fällen (Datenschutzanfragen gemäß DSGVO) beachten wir die gesetzlichen Fristen von 30 Tagen.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Kann ich telefonisch Kontakt aufnehmen?</p>
+                    <p>Nein, wir bieten aktuell keinen Telefonsupport an. Dies ermöglicht uns, alle Anfragen schriftlich zu dokumentieren und gleichmäßig zu bearbeiten. Schriftliche Anfragen haben den Vorteil, dass wir sie genau prüfen und mit Quellen belegen können.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Warum erhalte ich keine Antwort auf meine Casino-spezifische Frage?</p>
+                    <p>Wir sind ein unabhängiger Informationsdienst und haben keinen Zugriff auf Casino-Konten, Transaktionen oder Bonusadministration. Für alle casinospezifischen Angelegenheiten müssen Sie sich direkt an den Kundenservice des jeweiligen Casinos wenden.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Kann ich Werbung auf Ihrer Website schalten?</p>
+                    <p>Für Werbe- und Kooperationsanfragen nutzen Sie bitte die E-Mail-Adresse <a href="mailto:kooperation@cadoola-online.de">kooperation@cadoola-online.de</a>. Bitte senden Sie eine detaillierte Projektbeschreibung mit. Wir prüfen jede Anfrage individuell.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <p class="faq-q">Wie kann ich einen Fehler auf Ihrer Website melden?</p>
+                    <p>Nutzen Sie für Fehlermeldungen bitte das Kontaktformular oder die E-Mail <a href="mailto:redaktion@cadoola-online.de">redaktion@cadoola-online.de</a>. Bitte geben Sie die genaue URL an und beschreiben Sie den Fehler. Screenshots sind sehr hilfreich.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Notice -->
+        <section class="section">
+            <h2>Datenschutzhinweis für Kontaktanfragen</h2>
+            
+            <div class="info-box">
+                <p><strong>Ihre Daten bei Kontaktaufnahme:</strong> Wenn Sie uns kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen. Weitere Informationen zur Datenverarbeitung finden Sie in unserer <a href="/privacy-policy">Datenschutzerklärung</a>.</p>
+            </div>
+            
+            <h3>Was mit Ihren Daten geschieht:</h3>
+            <ul>
+                <li><strong>Speicherdauer:</strong> Ihre Daten werden so lange gespeichert, wie für die Bearbeitung Ihrer Anfrage notwendig, maximal jedoch 3 Jahre</li>
+                <li><strong>Weitergabe:</strong> Wir geben Ihre Daten nicht an Dritte weiter, außer dies ist zur Bearbeitung Ihrer Anfrage erforderlich</li>
+                <li><strong>Löschung:</strong> Sie können jederzeit die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen</li>
+                <li><strong>Verschlüsselung:</strong> Die Datenübertragung per E-Mail erfolgt unverschlüsselt – bitte beachten Sie dies bei sensiblen Informationen</li>
+            </ul>
+            
+            <div class="response-time">
+                <p><strong>Hinweis für datenschutzrechtliche Anfragen:</strong> Bei Auskunftsersuchen gemäß Art. 15 DSGVO benötigen wir zur Identifizierung eine Kopie Ihres Personalausweises (mit geschwärzten irrelevanten Daten) oder ein anderes sicheres Identifikationsmittel.</p>
+            </div>
+        </section>
+
+        <!-- Physical Address (Optional) -->
+        <section class="section">
+            <h2>Postanschrift (nur für schriftliche Korrespondenz)</h2>
+            
+            <div class="contact-card" style="max-width: 600px; margin: 0 auto;">
+                <h4>Cadoola Online Guide</h4>
+                <p><strong>Postfachadresse:</strong><br>
+                Cadoola Online Guide<br>
+                Postfach 123456<br>
+                10115 Berlin<br>
+                Deutschland</p>
+                
+                <div class="info-box" style="margin-top: 1rem;">
+                    <p><small><strong>Bitte beachten:</strong> Diese Adresse ist nur für schriftliche Korrespondenz bestimmt. Wir können keine Pakete oder persönliche Besuche entgegennehmen. Für eine schnellere Bearbeitung nutzen Sie bitte die elektronischen Kontaktmöglichkeiten.</small></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Resources -->
+        <section class="section">
+            <h2>Weitere hilfreiche Seiten</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4><a href="/privacy-policy">Datenschutzerklärung</a></h4>
+                    <p>Informationen zur Verarbeitung Ihrer personenbezogenen Daten</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4><a href="/terms-conditions">Allgemeine Geschäftsbedingungen</a></h4>
+                    <p>Nutzungsbedingungen für unsere Website</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4><a href="/disclaimer">Haftungsausschluss</a></h4>
+                    <p>Rechtliche Hinweise und Haftungsbeschränkungen</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4><a href="/responsible-gaming">Verantwortungsvolles Spielen</a></h4>
+                    <p>Informationen und Hilfsangebote bei Spielsucht</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <a href="/">Startseite</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-conditions">Terms & Conditions</a>
+                <a href="/responsible-gaming">Responsible Gaming</a>
+                <a href="/disclaimer">Disclaimer</a>
+                <a href="/kontakt">Kontakt</a>
+            </div>
+            <div class="footer-logos">
+                <img 
+                    src="/images/footer-18.png" 
+                    alt="Alterskennzeichnung 18+: Nur für volljährige Personen" 
+                    width="50" 
+                    height="40" 
+                    loading="lazy">
+                <img 
+                    src="/images/footer-begambleaware.png" 
+                    alt="BeGambleAware - Ressource für verantwortungsvolles Spielverhalten" 
+                    width="180" 
+                    height="40" 
+                    loading="lazy">
+                <img 
+                    src="/images/footer-gamcare.png" 
+                    alt="GamCare - Professionelle Beratung bei Spielsuchtproblemen" 
+                    width="120" 
+                    height="40" 
+                    loading="lazy">
+                <img 
+                    src="/images/footer-gamban.png" 
+                    alt="Gamban - Software zur Selbstsperrung von Glücksspielangeboten" 
+                    width="120" 
+                    height="40" 
+                    loading="lazy">
+                <img 
+                    src="/images/footer-betblocker.png" 
+                    alt="BetBlocker - Kostenfreie Browsererweiterung zur Spielsperre" 
+                    width="120" 
+                    height="40" 
+                    loading="lazy">
+            </div>
+            <p class="disclaimer">© 2026 cadoola-online.de – Unabhängiger Informationsdienst. Glücksspiel kann abhängig machen. Hilfe und Beratung: <a href="https://www.bzga.de/" rel="nofollow noopener noreferrer">BZgA</a> (Kostenlose Hotline: 0800 1372700). Diese Seite ist nicht mit Cadoola Casino verbunden.</p>
+            <!-- Analytics placeholder -->
+            <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script> -->
+        </div>
+    </footer>
+
+    <!-- Minimal JS for form handling -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple form validation and submission simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const privacy = document.querySelector('input[name="privacy"]').checked;
+            
+            if (!name || !email || !subject || !message || !privacy) {
+                alert('Bitte füllen Sie alle erforderlichen Felder aus und akzeptieren Sie die Datenschutzerklärung.');
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+                return;
+            }
+            
+            // Simulate form submission (in production, this would be a real AJAX request)
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                this.reset();
+                successMessage.style.display = 'none';
+            }, 5000);
+            
+            // In a real implementation, you would send the data to your server here
+            // Example: fetch('/api/contact', { method: 'POST', body: new FormData(this) })
+        });
+        
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Auto-resize textarea
+        document.getElementById('message').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    </script>
+</body>
+</html>
